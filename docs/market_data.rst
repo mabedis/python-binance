@@ -46,7 +46,7 @@ Iterate over aggregate trades for a symbol from a given date or a given order id
 
     # convert the iterator to a list
     # note: generators can only be iterated over once so we need to call it again
-    agg_trades = client.aggregate_trade_iter(symbol='ETHBTC', '30 minutes ago UTC')
+    agg_trades = client.aggregate_trade_iter(symbol='ETHBTC', start_str='30 minutes ago UTC')
     agg_trade_list = list(agg_trades)
 
     # example using last_id value
